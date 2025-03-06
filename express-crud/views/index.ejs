@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>USERNAME</th>
+                <th>AGE</th>
+                <th>ACTIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => {%>
+                <tr>
+                    <td><a href="/user/<%= user.id%>"><%= user.id%></a></td>
+                    <td><%= user.username%></td>
+                    <td><%= user.age%></td>
+                    <td><a href="/user/:id/delete">Delete</a></td>
+                </tr>
+           <% }); %>
+        </tbody>
+    </table>
+    <p>create a new user <span><a href="/user/create">New user</a></span></p>
+</body>
+</html>
