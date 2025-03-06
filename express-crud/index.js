@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 
 
 //database connection
-mongoose.connect('https://localhost:27017/UsersDB')
+mongoose.connect('mongodb://localhost:27017/UsersDB')
     .then(()=>console.log('connected successfully'))
     .catch((err)=>console.error('Failed due to::',err));
 

@@ -6,8 +6,8 @@ const mongoose= require('mongoose');
 
 //mongoose is good in schema rather than db Collection
 const UserSchema= new mongoose.Schema({
-    username: {type: String},
-    age:{type:Number}
+    username: {type: String, required:true},
+    age:{type:Number, required:true}
 });
 
 

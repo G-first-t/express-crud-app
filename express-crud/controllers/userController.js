@@ -4,13 +4,13 @@ const User = require('../models/users');
 //get all the users
 exports.getAllUsers= async (req,res)=>{
     const users= await User.find();
-    res.render('views.index',{users});
+    res.render('index',{users});
 }
 
 //get single user
 exports.getUserById= async(req,res)=>{
     const user=await User.findById(req.params.id);
-    res.render('views.show',{user});
+    res.render('show',{user});
 }
 //create a new user
 exports.createNewUser= async(req,res)=>{
@@ -23,7 +23,7 @@ exports.createNewUser= async(req,res)=>{
 //show edit-form
 exports.showEditForm= async (req,res)=>{
     const user = await User.findById(req.params.id);
-    res.render('views.edit',{user});
+    res.render('edit',{user});
 }
 //update or edit a user
 exports.editUser= async(req,res)=>{
@@ -35,6 +35,10 @@ exports.editUser= async(req,res)=>{
 exports.deleteUser= async(req,res)=>{
     await User.findByIdAndDelete(req.params.id);
     res.redirect('/');
+}
+
+exports.createForm= async (req,res)=>{
+    res.render('create');
 }
 
 
