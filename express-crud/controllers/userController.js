@@ -1,7 +1,7 @@
 const User = require('../models/users');
 //both must start with exports
 
-//get all the user
+//get all the users
 exports.getAllUsers= async (req,res)=>{
     const users= await User.find();
     res.render('views.index',{users});
