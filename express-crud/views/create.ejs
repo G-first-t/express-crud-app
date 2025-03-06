@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create page</title>
+</head>
+<body>
+    <p>Create the details</p>
+    <form action="/user/create" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" 
+              value="<%= user.username%>"
+              name="username" placeholder="Enter your Username">
+        <label for="age">Age</label>
+        <input type="number" id="age" 
+               name="age" 
+               value="<%= user.age%>"
+               placeholder="enter your username">
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
