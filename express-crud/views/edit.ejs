@@ -7,7 +7,7 @@
 </head>
 <body>
     <p>Edit the details</p>
-    <form action="/user/<%user.id%>" method="post">
+    <form action="/user/<%=user.id%>/edit" method="post">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" 
                 value="<%= user.username%>"

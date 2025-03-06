@@ -20,11 +20,15 @@
                     <td><a href="/user/<%= user.id%>"><%= user.id%></a></td>
                     <td><%= user.username%></td>
                     <td><%= user.age%></td>
-                    <td><a href="/user/:id/delete">Delete</a></td>
+                    <td>
+                        <form action="/<%= user.id %>/delete" method="post">
+                           <button type="submit">Delete</button>
+                        </form>
+                    </td>
                 </tr>
            <% }); %>
         </tbody>
     </table>
-    <p>create a new user <span><a href="/user/create">New user</a></span></p>
+    <p>create a new user <span><a href="/create">New user</a></span></p>
 </body>
 </html>
